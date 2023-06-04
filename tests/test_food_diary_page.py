@@ -10,10 +10,10 @@ CREDENTIALS = [
 
 
 @allure.severity(allure.severity_level.NORMAL)
-@allure.feature('Nutrition')
-@allure.story('Testing the nutrition page')
+@allure.feature('План питания')
 @pytest.mark.nutrition
 @pytest.mark.parametrize('creds', CREDENTIALS)
+@allure.title("Заполнение плана питания")
 def test_fill_in_a_food_diary(driver, login, creds):
     food_diary = FoodDiary(driver)
     food_diary.open_food_diary_page()

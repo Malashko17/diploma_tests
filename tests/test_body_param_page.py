@@ -4,8 +4,8 @@ import pytest
 
 
 @allure.severity(allure.severity_level.NORMAL)
-@allure.feature('Body parameters')
-@allure.story('Testing the body parameters page')
+@allure.feature('Изменение параметров тела')
+@allure.title('Изменение текущего веса')
 @pytest.mark.body_parameters
 def test_add_weight_param_2_december(driver, login):
     body_param = BodyParam(driver)

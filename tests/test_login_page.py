@@ -20,7 +20,6 @@ class TestLogin:
         assert home_page.check_that_username_is_displayed_in_the_welcome_block
 
     @allure.severity(allure.severity_level.NORMAL)
-    @allure.story('Testing the login page')
     @pytest.mark.login
     def test_login_with_incorrect_password(self, driver):
         login_page = LoginPage(driver)
@@ -30,7 +29,6 @@ class TestLogin:
         assert login_page.check_alert_message_after_login_with_incorrect_password()
 
     @allure.severity(allure.severity_level.NORMAL)
-    @allure.story('Testing the login page')
     @pytest.mark.login
     def test_login_with_incorrect_email(self, driver):
         login_page = LoginPage(driver)
@@ -40,7 +38,6 @@ class TestLogin:
         login_page.check_alert_message_after_login_with_incorrect_email()
 
     @allure.severity(allure.severity_level.MINOR)
-    @allure.story('Testing the login page')
     @pytest.mark.login
     def test_forget_password_link_presents_on_the_page(self, driver):
         login_page = LoginPage(driver)
