@@ -42,7 +42,7 @@ class TestLogin:
     @allure.severity(allure.severity_level.MINOR)
     @allure.story('Testing the login page')
     @pytest.mark.login
-    def test_forget_password_link_presents_on_the_page(self,driver):
+    def test_forget_password_link_presents_on_the_page(self, driver):
         login_page = LoginPage(driver)
         login_page.open_login_page()
         assert login_page.check_that_forget_password_link_presents_on_the_login_page()

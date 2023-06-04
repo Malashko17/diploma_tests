@@ -48,7 +48,7 @@ def test_edit_a_motivation_note(driver, login):
     notes_page.open_notes_page()
     notes_page.add_a_motivation_note()
     notes_page.edit_a_motivation_note()
-    assert notes_page.check_that_changes_in_motivation_note_were_displayed()
+    assert False, "Поле ввода изменилось"
 
 
 @allure.severity(allure.severity_level.NORMAL)
