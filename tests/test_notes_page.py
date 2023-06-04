@@ -6,6 +6,7 @@ import pytest
 @allure.feature('Заметки')
 class TestNotes:
 
+    @allure.title("Добавление заметки")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.notes
     def test_add_a_motivation_note(self, driver, login):
@@ -14,6 +15,7 @@ class TestNotes:
         notes_page.add_a_motivation_note()
         assert notes_page.check_that_a_motivation_note_was_added()
 
+    @allure.title("Удаление заметки")
     @allure.severity(allure.severity_level.NORMAL)
     @pytest.mark.notes
     def test_delete_a_motivation_note(self, driver, login):
@@ -24,10 +26,8 @@ class TestNotes:
         notes_page.delete_a_motivation_note()
         assert notes_page.check_that_a_motivation_note_was_deleted()
 
-
+    @allure.title("Отмена удаления заметки")
     @allure.severity(allure.severity_level.NORMAL)
-    @allure.feature('Notes')
-    @allure.story('Testing the notes page')
     @pytest.mark.notes
     def test_cancel_deleting_a_motivation_note(self, driver, login):
         notes_page = NotesPage(driver)
@@ -36,10 +36,8 @@ class TestNotes:
         notes_page.cancel_deleting_a_motivation_note()
         assert notes_page.check_that_a_motivation_note_was_not_deleted()
 
-
+    @allure.title("Редактирование заметки")
     @allure.severity(allure.severity_level.NORMAL)
-    @allure.feature('Notes')
-    @allure.story('Testing the notes page')
     @pytest.mark.notes
     def test_edit_a_motivation_note(self, driver, login):
         notes_page = NotesPage(driver)
@@ -48,10 +46,8 @@ class TestNotes:
         notes_page.edit_a_motivation_note()
         assert False, "Поле ввода изменилось"
 
-
+    @allure.title("Изменение шрифта текста заметки на жирный")
     @allure.severity(allure.severity_level.NORMAL)
-    @allure.feature('Notes')
-    @allure.story('Testing the notes page')
     @pytest.mark.notes
     def test_change_font_to_bold_of_motivation_note_text(self, driver, login):
         notes_page = NotesPage(driver)
@@ -60,10 +56,8 @@ class TestNotes:
         notes_page.change_font_to_bold_of_motivation_note_text()
         assert notes_page.check_that_font_of_motivation_note_has_become_bold()
 
-
+    @allure.title("Изменение шрифта текста заметки на курсив")
     @allure.severity(allure.severity_level.NORMAL)
-    @allure.feature('Notes')
-    @allure.story('Testing the notes page')
     @pytest.mark.notes
     def test_change_font_to_italic_of_motivation_note_text(self, driver, login):
         notes_page = NotesPage(driver)

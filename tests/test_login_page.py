@@ -8,7 +8,6 @@ from pages.home_page import HomePage
 @allure.feature('Вход в систему')
 class TestLogin:
     @allure.severity(allure.severity_level.CRITICAL)
-    @allure.story('Testing the login page')
     @allure.title("Проверка входа в систему с корректными данными")
     @pytest.mark.login
     def test_enter_correct_login_data(self, driver):
