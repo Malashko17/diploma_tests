@@ -1,7 +1,7 @@
 email = 'pawel.malashko@yandex.ru'
 first_name = 'Pavel'
 last_name = 'Malashko'
-password = '321'
+password = '123'
 new_password = '123'
 
 motivation_note = 'Never give up. ' \

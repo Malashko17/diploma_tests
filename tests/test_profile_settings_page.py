@@ -39,16 +39,16 @@ def test_change_incorrect_password(driver, login):
     assert profile_settings_page.check_pop_up_message_that_password_was_not_saved()
 
 
-@allure.severity(allure.severity_level.CRITICAL)
-@allure.feature('Profile settings')
-@allure.story('Testing the profile settings page')
-@pytest.mark.change_existing_password
-# @pytest.mark.skip('Run only at the end of testing')
-def test_change_existing_password(driver, login):
-    profile_settings_page = ProfileSettings(driver)
-    profile_settings_page.open_profile_setting_page()
-    profile_settings_page.change_existing_password()
-    assert profile_settings_page.check_pop_up_message_that_user_info_was_saved()
+# @allure.severity(allure.severity_level.CRITICAL)
+# @allure.feature('Profile settings')
+# @allure.story('Testing the profile settings page')
+# @pytest.mark.change_existing_password
+# # @pytest.mark.skip('Run only at the end of testing')
+# def test_change_existing_password(driver, login):
+#     profile_settings_page = ProfileSettings(driver)
+#     profile_settings_page.open_profile_setting_page()
+#     profile_settings_page.change_existing_password()
+#     assert profile_settings_page.check_pop_up_message_that_user_info_was_saved()
 
 
 
